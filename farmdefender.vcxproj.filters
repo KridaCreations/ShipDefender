@@ -18,6 +18,9 @@
     <ClCompile Include="nodecounter.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="sceneManager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="header">
@@ -41,6 +44,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="nodecounter.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneManager.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>

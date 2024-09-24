@@ -1,15 +1,23 @@
 #pragma once
 #include<vector>
+#include <SFML/Graphics.hpp>
 
 class node
 {
 public:
 	double x = 0, y = 0;
 	int nodeid;
-	node(double x, double y,int id);
-	void ready();
-	void process(double delta = 0.0);
-	void draw();
+	
+	//constructors
+	node(double x, double y);
+
+
+	//virtual functions
+	virtual void ready();
+	virtual void process(double delta = 0.0);
+	virtual void draw(sf::RenderWindow &window);
+
+	//deleted functions
 	node() = delete;
 };
 

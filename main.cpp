@@ -1,21 +1,24 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <stdlib.h>
+#include <unordered_set>
 #include "node.h"
 #include "grasspatch.h"
 #include "nodecounter.h"
+#include "sceneManager.h"
 using namespace std;
 
+sceneManager* sceneManager::instancePtr = nullptr;
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(800, 600), "My window", sf::Style::Default);
-	vector<node*>objects;
+	double width = 1500, height = 800;
+	sf::RenderWindow window(sf::VideoMode(1500, 800), "My window", sf::Style::Default);
+	
+	sceneManager* scene = new sceneManager();
 
-	nodecounter ncount;
-	grasspatch ground(ncount.getNewId(), 0, 0, 12);
-	objects.push_back(&ground);
-	cout << objects.back()->x<<" "<<objects.back()->nodeid<< endl;
+	grasspatch ground(width/2.0, height/2.0, 12); //adding grasspatch
+	(scene->objects).insert(&ground);
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -23,10 +26,31 @@ int main()
 		{
 			if (event.type == sf::Event::Closed)
 				window.close();
-		}
-		window.clear(sf::Color::Magenta);
 
-		window.display();
+
+
+			//calling the process functions
+			sf::Time deltatime = scene->gameClock.getElapsedTime(); //deltatime
+			double usec = deltatime.asMicroseconds();
+			scene->gameClock.restart(); //timer restart
+			for (auto& it : scene->objects)
+			{
+				it->process(usec/(1000000.000));
+			}
+
+
+
+			//drawing all the objects;
+			window.clear(sf::Color::Magenta);
+			for (auto& it : scene->objects)
+			{
+				it->draw(window);
+			}
+			cout << endl;
+
+			window.display();	
+		}
+
 	}
 
 	return 0;

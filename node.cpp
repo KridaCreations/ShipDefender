@@ -1,9 +1,10 @@
 #include "node.h"
-
-
-node::node(double x, double y,int id)
+#include <iostream>
+#include "sceneManager.h"
+node::node(double x, double y)
 {
-	this->nodeid = id;
+	sceneManager* scene = new sceneManager();
+	this->nodeid = scene->ncount.getNewId();
 	this->x = x;
 	this->y = y;
 }
@@ -15,7 +16,7 @@ void node::process(double delta)
 {
 
 }
-void node::draw()
+void node::draw(sf::RenderWindow &window)
 {
-
+	
 }
