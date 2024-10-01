@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="gun.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="node.cpp" />
@@ -143,6 +144,7 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="gun.h" />
     <ClInclude Include="sceneManager.h" />
     <ClInclude Include="node.h" />
     <ClInclude Include="grasspatch.h" />

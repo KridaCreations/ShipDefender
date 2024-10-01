@@ -1,7 +1,7 @@
 #pragma once
 #include<vector>
 #include <SFML/Graphics.hpp>
-
+//#include "sceneManager.h"
 class node
 {
 public:

@@ -21,6 +21,9 @@
     <ClCompile Include="sceneManager.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="gun.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="header">
@@ -47,6 +50,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="sceneManager.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="gun.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>

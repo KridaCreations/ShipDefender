@@ -3,7 +3,7 @@
 #include "sceneManager.h"
 node::node(double x, double y)
 {
-	sceneManager* scene = new sceneManager();
+	sceneManager* scene = sceneManager::getInstance();
 	this->nodeid = scene->ncount.getNewId();
 	this->x = x;
 	this->y = y;

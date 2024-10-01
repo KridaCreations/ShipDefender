@@ -1,8 +1,11 @@
 #pragma once
+#include <SFML/Graphics.hpp>
 #include <iostream>
 #include <unordered_set>
 #include <vector>
-#include <SFML/Graphics.hpp>
+#include <stdlib.h>
+#include "grasspatch.h"
+#include "nodecounter.h"
 #include "nodecounter.h"
 #include "node.h"
 
@@ -18,7 +21,8 @@ public:
 	std::vector<node*>toremove; // objects which will be removed 
 	nodecounter ncount; //node counter for generating the unique nodeids
 	sf::Clock gameClock;//declaring game timer
-
+	sf::RenderWindow* window;
+private:
 	sceneManager() {
 
 	}
