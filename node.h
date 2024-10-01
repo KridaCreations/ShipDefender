@@ -19,5 +19,6 @@ public:
 
 	//deleted functions
 	node() = delete;
+	~node();
 };
 

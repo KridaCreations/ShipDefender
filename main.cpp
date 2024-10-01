@@ -1,5 +1,5 @@
 #include "sceneManager.h"
-#include "gun.h"
+
 
 using namespace std;
 
@@ -19,11 +19,29 @@ int main()
 	(scene->objects).insert(&machinegun);
 	while (window.isOpen())
 	{
+
+		//adding new nodes to the drawable nodes list
+		for (auto it : (scene->toadd))
+		{
+			cout << "some node to add"<<endl;
+			scene->objects.insert(it);
+		}
+		scene->toadd.clear();
+		//removing nodes to be removed from queue;
+		for (auto it : (scene->toremove))
+		{
+			scene->objects.erase(it);
+			delete it;
+		}
+		scene->toremove.clear();
+		//getting event
 		sf::Event event;
+		scene->latestevent = NULL;
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
 				window.close();
+			scene->latestevent = &event;
 
 		}
 

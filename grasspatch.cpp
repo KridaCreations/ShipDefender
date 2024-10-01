@@ -8,6 +8,7 @@ grasspatch::grasspatch(double x, double y, double length, sf::Color color):node(
 	this->shape.setPosition(x, y);
 	this->shape.setRadius(length);
 	this->shape.setFillColor(color);
+	this->shape.setPointCount(8);
 }
 
 void grasspatch::draw(sf::RenderWindow& window)

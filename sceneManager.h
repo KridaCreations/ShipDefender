@@ -8,6 +8,8 @@
 #include "nodecounter.h"
 #include "nodecounter.h"
 #include "node.h"
+#include "gun.h"
+#include "bullet.h"
 
 class sceneManager
 {
@@ -21,7 +23,8 @@ public:
 	std::vector<node*>toremove; // objects which will be removed 
 	nodecounter ncount; //node counter for generating the unique nodeids
 	sf::Clock gameClock;//declaring game timer
-	sf::RenderWindow* window;
+	sf::RenderWindow* window = NULL;
+	sf::Event* latestevent = NULL;
 private:
 	sceneManager() {
 
