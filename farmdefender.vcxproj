@@ -134,6 +134,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bullet.cpp" />
+    <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="enemySpawner.cpp" />
     <ClCompile Include="gun.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="main.cpp" />
@@ -146,6 +148,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bullet.h" />
+    <ClInclude Include="enemy.h" />
+    <ClInclude Include="enemySpawner.h" />
     <ClInclude Include="gun.h" />
     <ClInclude Include="sceneManager.h" />
     <ClInclude Include="node.h" />

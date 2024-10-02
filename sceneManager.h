@@ -10,6 +10,8 @@
 #include "node.h"
 #include "gun.h"
 #include "bullet.h"
+#include "enemySpawner.h"
+#include "enemy.h"
 
 class sceneManager
 {
@@ -21,6 +23,9 @@ public:
 	std::unordered_set<node*>objects;//currobjects
 	std::vector<node*>toadd; // objects which will be added 
 	std::vector<node*>toremove; // objects which will be removed 
+	std::unordered_set<node*>physicsobjects;
+	std::vector<node*>toaddphysicsobjects;
+	std::vector<node*>toremovephysicsobjects;
 	nodecounter ncount; //node counter for generating the unique nodeids
 	sf::Clock gameClock;//declaring game timer
 	sf::RenderWindow* window = NULL;

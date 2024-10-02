@@ -27,6 +27,12 @@
     <ClCompile Include="bullet.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="enemySpawner.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="header">
@@ -59,6 +65,12 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="bullet.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="enemySpawner.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>

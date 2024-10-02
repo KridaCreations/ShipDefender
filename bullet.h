@@ -6,6 +6,7 @@ class bullet : public node
 {
 public:
 	sf::RectangleShape shape;
+	
 	bullet(double x, double y, sf::Vector2f direction,double speed, sf::Color color = sf::Color(252, 7, 3));
 	sf::Vector2f direction;
 	double speed;

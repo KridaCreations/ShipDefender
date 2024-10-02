@@ -29,8 +29,26 @@ void bullet::process(double delta)
 	this->shape.setPosition(pos.x, pos.y);
 	if (this->Clock.getElapsedTime().asSeconds() > 3)
 	{
-		std::cout << "deleting bullet id "<<this->nodeid<<" \n ";
+		//std::cout << "deleting bullet id "<<this->nodeid<<" \n ";
 		sceneManager::getInstance()->toremove.push_back(this);
+	}
+
+
+	//physics calculation
+	for (auto& it : sceneManager::getInstance()->physicsobjects)
+	{
+		enemy* enem = dynamic_cast<enemy*>(it);
+		sf::Vector2f enemypos = enem->shape.getPosition();
+		sf::Vector2f pos = this->shape.getPosition();
+		double disx = std::abs(enemypos.x - pos.x);
+		double disy = std::abs(enemypos.y - pos.y);
+		double distance = std::sqrt((disx * disx) + (disy * disy));
+		int enemysize = enem->shape.getRadius();
+		if (distance < enemysize)
+		{
+			enem->takedamage(10);
+			sceneManager::getInstance()->toremove.push_back(this);
+		}
 	}
 }
 

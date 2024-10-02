@@ -17,13 +17,18 @@ int main()
 
 	gun machinegun((width / 2.0), (height / 2.0), 50,10);
 	(scene->objects).insert(&machinegun);
+
+	//adding the enemySpawner
+	enemySpawner enemynode(400);
+	(scene->objects).insert(&enemynode);
+
 	while (window.isOpen())
 	{
 
 		//adding new nodes to the drawable nodes list
 		for (auto it : (scene->toadd))
 		{
-			cout << "some node to add"<<endl;
+			//cout << "some node to add"<<endl;
 			scene->objects.insert(it);
 		}
 		scene->toadd.clear();
@@ -34,6 +39,23 @@ int main()
 			delete it;
 		}
 		scene->toremove.clear();
+		
+		for (auto it : (scene->toaddphysicsobjects))
+		{
+			//cout << "some node to add"<<endl;
+			scene->physicsobjects.insert(it);
+		}
+		scene->toaddphysicsobjects.clear();
+		
+		for (auto it : (scene->toremovephysicsobjects))
+		{
+			//cout << "some node to add"<<endl;
+			scene->physicsobjects.erase(it);
+		}
+		scene->toremovephysicsobjects.clear();
+
+		
+		
 		//getting event
 		sf::Event event;
 		scene->latestevent = NULL;

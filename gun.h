@@ -1,8 +1,6 @@
 #pragma once
 
-#include "node.h"
 #include "sceneManager.h"
-#include <SFML/Graphics.hpp>
 class gun : public node
 {
 public:
