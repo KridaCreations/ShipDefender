@@ -1,4 +1,4 @@
-#include "sceneManager.h"
+#include "../header/sceneManager.h"
 
 enemy::enemy(double x, double y, int length,double speed,sf::Vector2f target, sf::Color color):node(x,y)
 {

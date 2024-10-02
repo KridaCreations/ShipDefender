@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="source\bullet.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\enemy.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\enemySpawner.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\grasspatch.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gun.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\node.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\nodecounter.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sceneManager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header\node.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\nodecounter.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\sceneManager.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\grasspatch.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\enemySpawner.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\enemy.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\bullet.h">
+      <Filter>header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="header">
+      <UniqueIdentifier>{0496589b-4b28-4a49-b364-3554099cb106}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{2ba334d5-be44-464f-b9d3-559afede525a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

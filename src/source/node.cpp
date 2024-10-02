@@ -1,5 +1,5 @@
 
-#include "sceneManager.h"
+#include "../header/sceneManager.h"
 node::node(double x, double y)
 {
 	sceneManager* scene = sceneManager::getInstance();

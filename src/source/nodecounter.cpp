@@ -1,4 +1,4 @@
-#include "nodecounter.h"
+#include "../header/nodecounter.h"
 
 int nodecounter::getNewId()
 {

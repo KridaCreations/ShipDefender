@@ -1,4 +1,4 @@
-#include "bullet.h"
+#include "../header/bullet.h"
 
 
 bullet::bullet(double x, double y,sf::Vector2f direction,double speed, sf::Color color):node(x,y)
