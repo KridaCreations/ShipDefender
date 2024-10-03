@@ -2,13 +2,18 @@
 
 
 
-
 gun::gun(double x, double y, double length, double width, sf::Color color) :node(x, y)
 {
 	this->shape.setOrigin(0,width/2);
 	this->shape.setPosition(x, y);
 	this->shape.setSize(sf::Vector2f(length,width));
 	this->shape.setFillColor(color);
+	
+	if (this->buffer.loadFromFile("gunsound1.wav"))
+	{
+		std::cout << "setting the buffer " << std::endl;
+		this->gunsound.setBuffer(this->buffer);
+	}
 	
 }
 
@@ -40,6 +45,9 @@ void gun::process(double delta)
 				double speed = 1000;
 				bullet* newbullet = new bullet(bullposx, bullposy, bulldirec, speed);
 				scene->toadd.push_back(newbullet);
+				
+				//playing sound
+				this->gunsound.play();
 			}
 
 		}

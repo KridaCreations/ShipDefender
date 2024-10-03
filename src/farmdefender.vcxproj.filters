@@ -26,9 +26,6 @@
     <ClCompile Include="source\sceneManager.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="source\Source.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\node.h">
@@ -52,6 +49,9 @@
     <ClInclude Include="header\bullet.h">
       <Filter>header</Filter>
     </ClInclude>
+    <ClInclude Include="header\gun.h">
+      <Filter>header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="header">
@@ -60,5 +60,16 @@
     <Filter Include="source">
       <UniqueIdentifier>{2ba334d5-be44-464f-b9d3-559afede525a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sounds">
+      <UniqueIdentifier>{1853607e-e203-44ff-aefe-dda53a24a163}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="assets\sounds\gunsound1.wav">
+      <Filter>sounds</Filter>
+    </Media>
+    <Media Include="enemyhit.wav">
+      <Filter>sounds</Filter>
+    </Media>
   </ItemGroup>
 </Project>

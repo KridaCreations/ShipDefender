@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+
 #include <iostream>
 #include <unordered_set>
 #include <vector>
@@ -31,6 +32,7 @@ public:
 	sf::RenderWindow* window = NULL;
 	sf::Event* latestevent = NULL;
 	grasspatch* grasspatch = NULL;
+	enemySpawner* enemyspawner = NULL;
 
 
 private:

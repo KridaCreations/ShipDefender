@@ -142,16 +142,20 @@
     <ClCompile Include="source\node.cpp" />
     <ClCompile Include="source\nodecounter.cpp" />
     <ClCompile Include="source\sceneManager.cpp" />
-    <ClCompile Include="source\Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\bullet.h" />
     <ClInclude Include="header\enemy.h" />
     <ClInclude Include="header\enemySpawner.h" />
     <ClInclude Include="header\grasspatch.h" />
+    <ClInclude Include="header\gun.h" />
     <ClInclude Include="header\node.h" />
     <ClInclude Include="header\nodecounter.h" />
     <ClInclude Include="header\sceneManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="assets\sounds\gunsound1.wav" />
+    <Media Include="enemyhit.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

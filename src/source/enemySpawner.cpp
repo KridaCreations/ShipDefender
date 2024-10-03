@@ -4,6 +4,10 @@ enemySpawner::enemySpawner(int length):node(10,10)
 {
 	this->length = length;
 	this->Clock.restart();
+	if (!this->enemyhitsoundbuffer.loadFromFile("enemyhit.wav"))
+	{
+		std::cout << "enemyhit sound not loaded" << std::endl;
+	}
 }
 
 void enemySpawner::process(double delta)
