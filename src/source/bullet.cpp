@@ -17,7 +17,6 @@ bullet::bullet(double x, double y,sf::Vector2f direction,double speed, sf::Color
 
 void bullet::draw(sf::RenderWindow& window)
 {
-	//std::cout << "draw in bullet called "<<this->nodeid << std::endl;
 	window.draw(this->shape);
 }
 
@@ -29,7 +28,6 @@ void bullet::process(double delta)
 	this->shape.setPosition(pos.x, pos.y);
 	if (this->Clock.getElapsedTime().asSeconds() > 3)
 	{
-		//std::cout << "deleting bullet id "<<this->nodeid<<" \n ";
 		sceneManager::getInstance()->toremove.push_back(this);
 	}
 

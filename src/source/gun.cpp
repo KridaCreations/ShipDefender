@@ -33,11 +33,9 @@ void gun::process(double delta)
 				std::cout << "mouse button pressed" << scene->latestevent->mouseButton.x<<" "<< scene->latestevent->mouseButton.y<< std::endl;
 				double relx = scene->latestevent->mouseButton.x - this->shape.getPosition().x;
 				double rely = scene->latestevent->mouseButton.y - this->shape.getPosition().y;
-				//std::cout << relx << " " << rely << std::endl;
 				double disfromcenter = std::sqrt((relx*relx) + (rely*rely));
 				double bullposx = ((relx / disfromcenter) * this->shape.getSize().x) + this->shape.getPosition().x;
 				double bullposy = ((rely / disfromcenter) * this->shape.getSize().x) + this->shape.getPosition().y;
-				//std::cout<<"normalised rel pos " << (relx / disfromcenter) << " " << (rely / disfromcenter) << std::endl;
 				sf::Vector2f bulldirec(relx,rely);
 				double speed = 1000;
 				bullet* newbullet = new bullet(bullposx, bullposy, bulldirec, speed);

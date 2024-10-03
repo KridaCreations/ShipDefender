@@ -14,7 +14,7 @@ int main()
 
 	grasspatch ground((width / 2.0)-150, (height / 2.0)-150, 150); //adding grasspatch
 	(scene->objects).insert(&ground);
-
+	scene->grasspatch = &ground;
 	gun machinegun((width / 2.0), (height / 2.0), 50,10);
 	(scene->objects).insert(&machinegun);
 
@@ -28,7 +28,6 @@ int main()
 		//adding new nodes to the drawable nodes list
 		for (auto it : (scene->toadd))
 		{
-			//cout << "some node to add"<<endl;
 			scene->objects.insert(it);
 		}
 		scene->toadd.clear();
@@ -42,14 +41,12 @@ int main()
 		
 		for (auto it : (scene->toaddphysicsobjects))
 		{
-			//cout << "some node to add"<<endl;
 			scene->physicsobjects.insert(it);
 		}
 		scene->toaddphysicsobjects.clear();
 		
 		for (auto it : (scene->toremovephysicsobjects))
 		{
-			//cout << "some node to add"<<endl;
 			scene->physicsobjects.erase(it);
 		}
 		scene->toremovephysicsobjects.clear();

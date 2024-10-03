@@ -5,6 +5,7 @@ class enemy : public node
 public:
 	sf::CircleShape shape;
 	int health;
+	int MAX_HEALTH;
 	sf::Vector2f target;
 	double speed;
 	//(posx, posy, radius of enemy, target, color)

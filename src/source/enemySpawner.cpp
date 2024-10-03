@@ -8,10 +8,9 @@ enemySpawner::enemySpawner(int length):node(10,10)
 
 void enemySpawner::process(double delta)
 {
-	if ((this->Clock.getElapsedTime().asSeconds() > 2))
+	if ((this->Clock.getElapsedTime().asSeconds() > 1))
 	{
 		sf::Vector2f pos = this->create_enemy_pos();
-		std::cout << "new enemt pos " << pos.x << " " << pos.y << std::endl;
 		node* newenemy = new enemy(pos.x,pos.y,50,10,sf::Vector2f(400,400));
 		sceneManager::getInstance()->toadd.push_back(newenemy);
 		sceneManager::getInstance()->toaddphysicsobjects.push_back(newenemy);

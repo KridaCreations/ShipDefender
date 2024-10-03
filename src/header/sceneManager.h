@@ -30,11 +30,17 @@ public:
 	sf::Clock gameClock;//declaring game timer
 	sf::RenderWindow* window = NULL;
 	sf::Event* latestevent = NULL;
+	grasspatch* grasspatch = NULL;
+
+
 private:
 	sceneManager() {
 
 	}
 	//static mutex mtx; //maybe for future use
+
+
+
 
 public:
 	static sceneManager* getInstance() {

@@ -5,7 +5,8 @@ enemy::enemy(double x, double y, int length,double speed,sf::Vector2f target, sf
 	this->shape.setOrigin((float)length, (float)length);
 	this->shape.setPosition(x, y);
 	this->speed = speed;
-	this->health = length;
+	this->MAX_HEALTH = length;
+	this->health = this->MAX_HEALTH;
 	this->target = target;
 	this->shape.setRadius(length);
 	this->shape.setOutlineThickness(2);
@@ -22,10 +23,48 @@ void enemy::process(double delta)
 	pos.x = pos.x + (dirx * speed * delta);
 	pos.y = pos.y + (diry * speed * delta);
 	this->shape.setPosition(pos.x, pos.y);
+
+
+	//checking collision with grasspatch
+
+	double disx = std::abs(pos.x - 400);
+	double disy = std::abs(pos.y - 400);
+	double length = std::sqrt((disx * disx) + (disy * disy));
+	if (length < (this->shape.getRadius() + 150)) // 150 is radius of the grasspatch
+	{
+		sceneManager::getInstance()->grasspatch->takedamage(this->health / 2);
+
+		sceneManager::getInstance()->toremove.push_back(this);
+		sceneManager::getInstance()->toremovephysicsobjects.push_back(this);
+	}
+
+
 }
 void enemy::draw(sf::RenderWindow& window)
 {
 	window.draw(this->shape);
+
+
+
+	//drawing the health bar
+	//drawing background..........
+
+	int barlen = this->shape.getRadius() * 2;
+	sf::RectangleShape background;
+	sf::Vector2f pos = this->shape.getPosition();
+	background.setPosition(pos.x - (this->shape.getRadius()), pos.y - (this->shape.getRadius()) - 15);
+	background.setSize(sf::Vector2f(barlen, 10));
+	background.setFillColor(sf::Color(245, 5, 5));
+
+	//drawing the frontgound
+	sf::RectangleShape frontground;
+	double len = ((float)this->health / (float)this->MAX_HEALTH) * (barlen);
+	frontground.setPosition(pos.x - (this->shape.getRadius()), pos.y - (this->shape.getRadius()) - 15);
+	frontground.setSize(sf::Vector2f(len, 10));
+	frontground.setFillColor(sf::Color(241, 245, 5));
+
+	window.draw(background);
+	window.draw(frontground);
 }
 
 void enemy::takedamage(int damage)
