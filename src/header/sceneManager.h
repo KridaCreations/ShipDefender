@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-
+#include <string.h>
 #include <iostream>
 #include <unordered_set>
 #include <vector>
@@ -13,6 +13,9 @@
 #include "bullet.h"
 #include "enemySpawner.h"
 #include "enemy.h"
+#include "mainscreen.h"
+#include "scoremonitor.h"
+
 
 class sceneManager
 {
@@ -31,8 +34,11 @@ public:
 	sf::Clock gameClock;//declaring game timer
 	sf::RenderWindow* window = NULL;
 	sf::Event* latestevent = NULL;
-	grasspatch* grasspatch = NULL;
+	grasspatch* ship = NULL;
 	enemySpawner* enemyspawner = NULL;
+	mainscreen* entryscene;
+	scoremonitor* scorecounter;
+	
 
 
 private:
@@ -55,8 +61,13 @@ public:
 		return instancePtr;
 	}
 
-
+	void removescene();
+	void startgame();
+	void endgame();
+	void showentryscreen();
+	void showgameoverscreen();
 	sceneManager(const sceneManager& obj) = delete;
+
 
 
 };

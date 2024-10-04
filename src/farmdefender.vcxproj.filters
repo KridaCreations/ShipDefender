@@ -26,6 +26,12 @@
     <ClCompile Include="source\sceneManager.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="source\mainscreen.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scoremonitor.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\node.h">
@@ -50,6 +56,12 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="header\gun.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\mainscreen.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\scoremonitor.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>

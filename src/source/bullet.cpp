@@ -26,7 +26,7 @@ void bullet::process(double delta)
 	pos.x = pos.x + (this->direction.x * speed * delta);
 	pos.y = pos.y + (this->direction.y * speed * delta);
 	this->shape.setPosition(pos.x, pos.y);
-	if (this->Clock.getElapsedTime().asSeconds() > 3)
+	if (this->Clock.getElapsedTime().asSeconds() > 10)
 	{
 		sceneManager::getInstance()->toremove.push_back(this);
 	}
@@ -44,7 +44,7 @@ void bullet::process(double delta)
 		int enemysize = enem->shape.getRadius();
 		if (distance < enemysize)
 		{
-			enem->takedamage(10);
+			enem->takedamage(20);
 			sceneManager::getInstance()->toremove.push_back(this);
 		}
 	}

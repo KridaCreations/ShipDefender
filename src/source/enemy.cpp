@@ -33,7 +33,7 @@ void enemy::process(double delta)
 	double length = std::sqrt((disx * disx) + (disy * disy));
 	if (length < (this->shape.getRadius() + 150)) // 150 is radius of the grasspatch
 	{
-		sceneManager::getInstance()->grasspatch->takedamage(this->health / 2);
+		sceneManager::getInstance()->ship->takedamage(this->health / 2);
 
 		sceneManager::getInstance()->toremove.push_back(this);
 		sceneManager::getInstance()->toremovephysicsobjects.push_back(this);
@@ -76,10 +76,11 @@ void enemy::takedamage(int damage)
 	this->shape.setOrigin(sf::Vector2f(newradius, newradius));
 	this->speed += 50;
 	//this->hurtsound.setPlayingOffset(sf::seconds(0.2f));
-	this->hurtsound.play();
+	//this->hurtsound.play();
 
 	if(this->health <= 0)
 	{
+		sceneManager::getInstance()->scorecounter->currentscore += 1;
 		sceneManager::getInstance()->toremove.push_back(this);
 		sceneManager::getInstance()->toremovephysicsobjects.push_back(this);
 	}

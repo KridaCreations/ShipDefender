@@ -12,31 +12,30 @@ int main()
 	sf::RenderWindow window(sf::VideoMode(width, height), "My window", sf::Style::Default);
 	scene->window = &window;
 
-	grasspatch ground((width / 2.0)-150, (height / 2.0)-150, 150,sf::Color(21,124,209)); //adding grasspatch
-	(scene->objects).insert(&ground);
-	scene->grasspatch = &ground;
-	gun machinegun((width / 2.0), (height / 2.0), 50,10);
-	(scene->objects).insert(&machinegun);
-
-	//adding the enemySpawner
-	enemySpawner enemynode(400);
-	(scene->objects).insert(&enemynode);
-	scene->enemyspawner = &enemynode;
+	scene->showentryscreen();
+	//scene->startgame();
 
 	while (window.isOpen())
 	{
 
 		//removing nodes to be removed from queue;
-		for (auto it : (scene->toremovephysicsobjects))
+		for (auto& it : (scene->toremovephysicsobjects))
 		{
-			scene->physicsobjects.erase(it);
+			if ((it != NULL) && ((scene->physicsobjects.find(it)) != (scene->physicsobjects.end())))
+			{
+				scene->physicsobjects.erase(it);
+			}
 		}
 		scene->toremovephysicsobjects.clear();
+		
 
-		for (auto it : (scene->toremove))
+		for (auto& it : (scene->toremove))
 		{
-			scene->objects.erase(it);
-			delete it;
+			if ((it != NULL) && ((scene->objects.find(it)) != (scene->objects.end())))
+			{
+				scene->objects.erase(it);
+				delete it;
+			}
 		}
 		scene->toremove.clear();
 		

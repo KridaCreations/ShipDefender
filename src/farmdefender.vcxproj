@@ -139,9 +139,11 @@
     <ClCompile Include="source\enemySpawner.cpp" />
     <ClCompile Include="source\grasspatch.cpp" />
     <ClCompile Include="source\gun.cpp" />
+    <ClCompile Include="source\mainscreen.cpp" />
     <ClCompile Include="source\node.cpp" />
     <ClCompile Include="source\nodecounter.cpp" />
     <ClCompile Include="source\sceneManager.cpp" />
+    <ClCompile Include="source\scoremonitor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\bullet.h" />
@@ -149,9 +151,11 @@
     <ClInclude Include="header\enemySpawner.h" />
     <ClInclude Include="header\grasspatch.h" />
     <ClInclude Include="header\gun.h" />
+    <ClInclude Include="header\mainscreen.h" />
     <ClInclude Include="header\node.h" />
     <ClInclude Include="header\nodecounter.h" />
     <ClInclude Include="header\sceneManager.h" />
+    <ClInclude Include="header\scoremonitor.h" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="assets\sounds\gunsound1.wav" />

@@ -47,6 +47,8 @@ void grasspatch::takedamage(int damage)
 	if (this->health <= 0)
 	{
 		//code for ending the game here
+		sceneManager::getInstance()->removescene();
+		//sceneManager::getInstance()->showgameoverscreen();
 	}
 }
 
