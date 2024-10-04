@@ -9,11 +9,10 @@ int main()
 {
 	double width = 800, height = 800;
 	sceneManager* scene = sceneManager::getInstance();//new sceneManager();
-	sf::RenderWindow window(sf::VideoMode(width, height), "My window", sf::Style::Default);
+	sf::RenderWindow window(sf::VideoMode(width, height), "My window", sf::Style::Titlebar| sf::Style::Close);
 	scene->window = &window;
 
 	scene->showentryscreen();
-	//scene->startgame();
 
 	while (window.isOpen())
 	{

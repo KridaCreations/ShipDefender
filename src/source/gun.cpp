@@ -35,7 +35,6 @@ void gun::process(double delta)
 		{
 			if (scene->latestevent->mouseButton.button == sf::Mouse::Left)
 			{
-				std::cout << "mouse button pressed" << scene->latestevent->mouseButton.x<<" "<< scene->latestevent->mouseButton.y<< std::endl;
 				double relx = scene->latestevent->mouseButton.x - this->shape.getPosition().x;
 				double rely = scene->latestevent->mouseButton.y - this->shape.getPosition().y;
 				double disfromcenter = std::sqrt((relx*relx) + (rely*rely));
