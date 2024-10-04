@@ -1,5 +1,5 @@
-# Farm defender game
-You are a farmer trying to defend the game from various animals and other type of threats.
+# Ship defender game
+You are a space ship driver trying to defend your space ship from the Extraterrestrial threats.
 
 # TechStack used
 - C++
