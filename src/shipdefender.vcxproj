@@ -24,6 +24,7 @@
     <ProjectGuid>{7baac746-ba55-4177-8771-061d885dd5a7}</ProjectGuid>
     <RootNamespace>basicsfmltest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>shipdefender</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -135,6 +136,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="source\bullet.cpp" />
+    <ClCompile Include="source\endscreen.cpp" />
     <ClCompile Include="source\enemy.cpp" />
     <ClCompile Include="source\enemySpawner.cpp" />
     <ClCompile Include="source\grasspatch.cpp" />
@@ -147,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\bullet.h" />
+    <ClInclude Include="header\endscreen.h" />
     <ClInclude Include="header\enemy.h" />
     <ClInclude Include="header\enemySpawner.h" />
     <ClInclude Include="header\grasspatch.h" />

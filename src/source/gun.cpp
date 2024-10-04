@@ -9,11 +9,11 @@ gun::gun(double x, double y, double length, double width, sf::Color color) :node
 	this->shape.setSize(sf::Vector2f(length,width));
 	this->shape.setFillColor(color);
 	
-	/*if (this->buffer.loadFromFile("gunsound1.wav"))
+	if (this->buffer.loadFromFile("gunsound1.wav"))
 	{
 		std::cout << "setting the buffer " << std::endl;
 		this->gunsound.setBuffer(this->buffer);
-	}*/
+	}
 	
 }
 
@@ -47,7 +47,7 @@ void gun::process(double delta)
 				scene->toadd.push_back(newbullet);
 				
 				//playing sound
-				//this->gunsound.play();
+				this->gunsound.play();
 			}
 
 		}

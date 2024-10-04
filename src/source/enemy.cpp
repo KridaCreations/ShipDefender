@@ -75,8 +75,8 @@ void enemy::takedamage(int damage)
 	int newradius = this->shape.getRadius();
 	this->shape.setOrigin(sf::Vector2f(newradius, newradius));
 	this->speed += 50;
-	//this->hurtsound.setPlayingOffset(sf::seconds(0.2f));
-	//this->hurtsound.play();
+	this->hurtsound.setPlayingOffset(sf::seconds(0.2f));
+	this->hurtsound.play();
 
 	if(this->health <= 0)
 	{

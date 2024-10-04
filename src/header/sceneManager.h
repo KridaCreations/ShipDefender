@@ -15,6 +15,7 @@
 #include "enemy.h"
 #include "mainscreen.h"
 #include "scoremonitor.h"
+#include "endscreen.h"
 
 
 class sceneManager
@@ -36,7 +37,6 @@ public:
 	sf::Event* latestevent = NULL;
 	grasspatch* ship = NULL;
 	enemySpawner* enemyspawner = NULL;
-	mainscreen* entryscene;
 	scoremonitor* scorecounter;
 	
 
@@ -65,7 +65,7 @@ public:
 	void startgame();
 	void endgame();
 	void showentryscreen();
-	void showgameoverscreen();
+	void showgameoverscreen(int score);
 	sceneManager(const sceneManager& obj) = delete;
 
 

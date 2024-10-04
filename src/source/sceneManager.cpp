@@ -46,11 +46,13 @@ void sceneManager::endgame()
 
 void sceneManager::showentryscreen()
 {
-	this->entryscene = new mainscreen("BebasNeue-Regular.ttf");
-	this->toadd.push_back(entryscene);
+	mainscreen* entry = new mainscreen("BebasNeue-Regular.ttf");
+	this->toadd.push_back(entry);
 }
 
-void sceneManager::showgameoverscreen()
+void sceneManager::showgameoverscreen(int score)
 {
-	
+	endscreen* end = new endscreen(score,"BebasNeue-Regular.ttf");
+	this->toadd.push_back(end);
+
 }

@@ -32,6 +32,9 @@
     <ClCompile Include="source\scoremonitor.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="source\endscreen.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\node.h">
@@ -62,6 +65,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="header\scoremonitor.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\endscreen.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>
