@@ -3,7 +3,8 @@ You are a farmer trying to defend the game from various animals and other type o
 # TechStack used
 - C++
 - sfml 
-# ide
+# IDE
 Visual Studio
 # Motivation 
 This is my first game using sfml 
+
