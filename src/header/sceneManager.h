@@ -50,7 +50,7 @@ private:
 
 public:
 	static sceneManager* getInstance() {
-		if (instancePtr == nullptr) {=
+		if (instancePtr == nullptr) {
 			if (instancePtr == nullptr) {
 				instancePtr = new sceneManager();
 			}
