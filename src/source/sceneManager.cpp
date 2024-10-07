@@ -20,9 +20,10 @@ void sceneManager::removescene()
 void sceneManager::startgame()
 {
 	int width = 800, height = 800;
-	grasspatch* ground = new grasspatch((width / 2.0) - 150, (height / 2.0) - 150, 150, sf::Color(21, 124, 209)); //adding grasspatch
-	this->toadd.push_back(ground);
-	this->ship = ground;
+	spaceship* ship = new spaceship((width / 2.0) - 150, (height / 2.0) - 150, 150, sf::Color(21, 124, 209));
+	this->toadd.push_back(ship);
+	this->ship = ship;
+
 	gun *machinegun = new gun((width / 2.0), (height / 2.0), 50, 10);
 	this->toadd.push_back(machinegun);
 

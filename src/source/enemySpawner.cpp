@@ -13,9 +13,7 @@ enemySpawner::enemySpawner(int length):node(10,10)
 void enemySpawner::process(double delta)
 {
 	if ((this->Clock.getElapsedTime().asSeconds() > 1))
-	//if(count == 0)
 	{
-		//count++;
 		sf::Vector2f pos = this->create_enemy_pos();
 		node* newenemy = new enemy(pos.x,pos.y,50,10,sf::Vector2f(400,400));
 		sceneManager::getInstance()->toadd.push_back(newenemy);

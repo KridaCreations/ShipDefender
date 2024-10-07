@@ -26,12 +26,12 @@ void enemy::process(double delta)
 	this->shape.setPosition(pos.x, pos.y);
 
 
-	//checking collision with grasspatch
+	//checking collision with spaceship
 
 	double disx = std::abs(pos.x - 400);
 	double disy = std::abs(pos.y - 400);
 	double length = std::sqrt((disx * disx) + (disy * disy));
-	if (length < (this->shape.getRadius() + 150)) // 150 is radius of the grasspatch
+	if (length < (this->shape.getRadius() + 150)) // 150 is radius of the spaceship
 	{
 		sceneManager::getInstance()->ship->takedamage(this->health / 2);
 

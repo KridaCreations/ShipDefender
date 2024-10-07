@@ -5,7 +5,6 @@
 #include <unordered_set>
 #include <vector>
 #include <stdlib.h>
-#include "grasspatch.h"
 #include "nodecounter.h"
 #include "nodecounter.h"
 #include "node.h"
@@ -14,6 +13,7 @@
 #include "enemySpawner.h"
 #include "enemy.h"
 #include "mainscreen.h"
+#include "spaceship.h"
 #include "scoremonitor.h"
 #include "endscreen.h"
 
@@ -35,7 +35,7 @@ public:
 	sf::Clock gameClock;//declaring game timer
 	sf::RenderWindow* window = NULL;
 	sf::Event* latestevent = NULL;
-	grasspatch* ship = NULL;
+	spaceship* ship = NULL;
 	enemySpawner* enemyspawner = NULL;
 	scoremonitor* scorecounter;
 	
@@ -45,15 +45,12 @@ private:
 	sceneManager() {
 
 	}
-	//static mutex mtx; //maybe for future use
-
 
 
 
 public:
 	static sceneManager* getInstance() {
-		if (instancePtr == nullptr) {
-			//lock_guard<mutex> lock(mtx); //maybe for future use
+		if (instancePtr == nullptr) {=
 			if (instancePtr == nullptr) {
 				instancePtr = new sceneManager();
 			}

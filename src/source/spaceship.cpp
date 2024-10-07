@@ -3,7 +3,7 @@
 
 
 
-grasspatch::grasspatch(double x, double y, double length, sf::Color color):node(x, y)
+spaceship::spaceship(double x, double y, double length, sf::Color color):node(x, y)
 {
 	this->shape.setPosition(x, y);
 	this->shape.setRadius(length);
@@ -11,7 +11,7 @@ grasspatch::grasspatch(double x, double y, double length, sf::Color color):node(
 	this->health = this->MAX_HEALTH;
 }
 
-void grasspatch::draw(sf::RenderWindow& window)
+void spaceship::draw(sf::RenderWindow& window)
 {
 	window.draw(this->shape);
 
@@ -35,12 +35,12 @@ void grasspatch::draw(sf::RenderWindow& window)
 
 }
 
-void grasspatch::process(double delta)
+void spaceship::process(double delta)
 {
 	
 }
 
-void grasspatch::takedamage(int damage)
+void spaceship::takedamage(int damage)
 {
 	this->health = std::max(0, this->health - damage);
 

@@ -8,7 +8,7 @@ sceneManager* sceneManager::instancePtr = nullptr;
 int main()
 {
 	double width = 800, height = 800;
-	sceneManager* scene = sceneManager::getInstance();//new sceneManager();
+	sceneManager* scene = sceneManager::getInstance();
 	sf::RenderWindow window(sf::VideoMode(width, height), "My window", sf::Style::Titlebar| sf::Style::Close);
 	scene->window = &window;
 
